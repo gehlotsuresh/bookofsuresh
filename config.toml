@@ -1,7 +1,8 @@
 baseURL = "http://bookofsuresh.com/"  # Replace with your website's URL
 languageCode = "en-us"
 title = "bookofsuresh"  # Replace with your blog's title
-theme = "book
+theme = "hugo-book"
+
 [params]
   ...
 	
