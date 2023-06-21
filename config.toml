@@ -1,0 +1,17 @@
+baseURL = "http://bookofsuresh.com/"  # Replace with your website's URL
+languageCode = "en-us"
+title = "bookofsuresh"  # Replace with your blog's title
+theme = "book
+[params]
+  ...
+	
+  [params.social]
+    github = "https://github.com/gehlotsuresh"
+    linkedin = "https://www.linkedin.com/in/sureshgehlot/"
+    twitter = "https://twitter.com/SuresGehlot"
+    email = "sureshgehlot@onmail.com"
+
+  [params]
+  BookToC = "/_index.md"
+
+

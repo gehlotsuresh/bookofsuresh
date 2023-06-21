@@ -1,0 +1,46 @@
+{{ if .Site.Params.BookRepo }}
+<a href="{{ .Site.Params.BookRepo }}" target="_blank" rel="noopener">
+    <i class="fas fa-code-branch"></i>
+    {{ if .Site.Params.BookRepoLabel }}
+        {{ .Site.Params.BookRepoLabel }}
+    {{ else }}
+        {{ "Repository" | i18n }}
+    {{ end }}
+</a>
+{{ end }}
+
+{{ if .Site.Params.BookEditPath }}
+    {{ $editPath := printf "%s/%s/%s" .Site.Params.BookRepo .Site.Params.BookEditPath .File.Path }}
+    <a href="{{ $editPath }}" target="_blank" rel="noopener">
+        <i class="fas fa-edit"></i>
+        {{ if .Site.Params.BookEditLabel }}
+            {{ .Site.Params.BookEditLabel }}
+        {{ else }}
+            {{ "Edit this page" | i18n }}
+        {{ end }}
+    </a>
+{{ end }}
+
+{{ if .Site.Params.social }}
+    {{ if .Site.Params.social.github }}
+        <a href="{{ .Site.Params.social.github }}" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i>
+        </a>
+    {{ end }}
+    {{ if .Site.Params.social.linkedin }}
+        <a href="{{ .Site.Params.social.linkedin }}" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    {{ end }}
+    {{ if .Site.Params.social.twitter }}
+        <a href="{{ .Site.Params.social.twitter }}" target="_blank" rel="noopener">
+            <i class="fab fa-twitter"></i>
+        </a>
+    {{ end }}
+    {{ if .Site.Params.social.email }}
+        <a href="{{ .Site.Params.social.email }}" target="_blank" rel="noopener">
+            <i class="fas fa-envelope"></i>
+        </a>
+    {{ end }}
+{{ end }}
+
